@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Caffé Crema | Italian Restaurant Frankfurt</title>
+
+<meta name="description" content="Authentic Italian cuisine, coffee, breakfast and outdoor dining in Frankfurt. Welcome to Caffé Crema.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#faf8f5;
+color:#222;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:90px 0;
+}
+
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.btn{
+display:inline-block;
+padding:15px 32px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:#7a4b2d;
+color:white;
+}
+
+.btn-primary:hover{
+background:#5d3821;
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:#222;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:28px;
+font-weight:700;
+color:#7a4b2d;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#7a4b2d;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero-content{
+max-width:800px;
+margin:auto;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-image img{
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+
+.section-title{
+font-size:2.8rem;
+margin-bottom:20px;
+color:#222;
+}
+
+.about-text p{
+margin-bottom:18px;
+color:#555;
+}
+
+/* MENU */
+
+.menu{
+background:white;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.menu-card{
+padding:30px;
+background:#faf8f5;
+border-radius:20px;
+transition:.3s;
+}
+
+.menu-card:hover{
+transform:translateY(-8px);
+}
+
+.menu-card h3{
+margin-bottom:10px;
+}
+
+/* FEATURES */
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+/* CONTACT */
+
+.contact{
+background:#222;
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.contact-card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+}
+
+.contact-card h3{
+margin-bottom:15px;
+}
+
+.contact-card p{
+margin-bottom:12px;
+}
+
+.contact-card a{
+color:#fff;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#aaa;
+text-align:center;
+padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.hero{
+padding:0 20px;
+}
+
+.btn{
+width:100%;
+max-width:280px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="container nav-container">
+
+<div class="logo">Caffé Crema</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Authentic Italian Taste In Frankfurt</h1>
+
+<p>
+Fresh coffee, handmade Italian dishes, breakfast, lunch and
+outdoor dining in a warm and welcoming atmosphere.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://wa.me/4915786813769" class="btn btn-primary">
+Reserve Table
+</a>
+
+<a href="#about" class="btn btn-outline">
+Explore
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80">
+</div>
+
+<div class="about-text">
+
+<h2 class="section-title">
+Welcome To Caffé Crema
+</h2>
+
+<p>
+Located in Frankfurt, Caffé Crema brings together authentic
+Italian flavors, premium coffee and a relaxing atmosphere.
+</p>
+
+<p>
+Whether you are stopping by for breakfast, enjoying lunch
+with friends or relaxing outdoors with a fresh espresso,
+our goal is simple: great food and genuine hospitality.
+</p>
+
+<p>
+Open every day from 08:00 to 21:00.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="menu" class="menu">
+
+<div class="container">
+
+<h2 class="section-title" style="text-align:center;">
+Popular Favorites
+</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+<h3>Italian Breakfast</h3>
+<p>Fresh pastries, coffee and authentic Italian flavors.</p>
+</div>
+
+<div class="menu-card">
+<h3>Handmade Pasta</h3>
+<p>Traditional recipes prepared fresh daily.</p>
+</div>
+
+<div class="menu-card">
+<h3>Wood-Fired Pizza</h3>
+<p>Classic Italian pizza crafted with quality ingredients.</p>
+</div>
+
+<div class="menu-card">
+<h3>Espresso & Coffee</h3>
+<p>Rich coffee blends served throughout the day.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title" style="text-align:center;">
+Why Guests Love Us
+</h2>
+
+<div class="features-grid">
+
+<div class="feature">
+<h3>Italian Cuisine</h3>
+<p>Traditional dishes prepared with care.</p>
+</div>
+
+<div class="feature">
+<h3>Outdoor Seating</h3>
+<p>Enjoy meals and coffee in the fresh air.</p>
+</div>
+
+<div class="feature">
+<h3>Open Daily</h3>
+<p>Serving guests every day from morning to evening.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2 class="section-title" style="color:white;text-align:center;">
+Visit Us
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Location</h3>
+
+<p>
+5 Ronneburgstraße<br>
+60435 Frankfurt am Main<br>
+Germany
+</p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Caff%C3%A9%20Crema%2050.151041%2C8.6905247">
+Open In Google Maps
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Contact</h3>
+
+<p>Phone: +49 157 86813769</p>
+
+<p>Opening Hours:</p>
+
+<p>Monday - Sunday<br>08:00 - 21:00</p>
+
+<a href="https://wa.me/4915786813769" class="btn btn-primary">
+WhatsApp Reservation
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Caffé Crema • Frankfurt, Germany
+
+</footer>
+
+</body>
+</html>
